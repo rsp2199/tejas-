@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>ContactMe</title>
+    <style>
+        body {
+            background-color: darkgray;
+            /* Body color set  with font family*/
+            font-family: 'DM Sans', sans-serif;
+
+
+        }
+
+        .form {
+            background: url(/contactimg.jpg);
+            /* Background image for contact us section*/
+            background-position: center;
+            background-repeat: no-repeat center center/cover;
+            color: whitesmoke;
+            text-align: center;
+            border: 5px solid whitesmoke;
+            border-radius: 30px;
+            padding: 10px;
+            margin-left: 400px;
+            margin-right: 400px;
+            margin-top: 100px;
+        }
+
+        #back {
+            margin-left: -450px;
+            color: black;
+        }
+
+        /* for input section text align center and border radius for curve input box  */
+        .inpu {
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* when we hover on h1 our color will be changed in to bluevoilet */
+        .form h1:hover {
+            color: blueviolet;
+        }
+
+        form {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1> -:Contact Me:-</h1>
+        <form action="backend.js">
+            <!-- <label for="name">Name</label> -->
+            <br>
+            <input class="inpu" placeholder="Enter your name" type="text" required>
+            <br><br>
+            <!-- <label for="email">Email</label> -->
+            <br>
+            <input class="inpu" placeholder="Enter your Email" type="email" required>
+            <br><br>
+            <!-- <label for="messge">Your Message</label> -->
+            <br>
+            <textarea class="inpu" placeholder="Enter your message" name="message" id="message" cols="30"
+                rows="10"></textarea>
+            <br><br>
+            <input type="button" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+        <a id="back" href="/index.html">Back</a>
+    </div>
+    <br>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+* {
+    /* border: 1px solid red; */
+    transition: 0.2s linear;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.man-image {
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.man-image img {
+    width: 45%;
+    height: 90%;
+
+
+}
+
+
+/* about css */
+.about-heading {
+    margin: 1rem 0;
+    padding: 10px 0;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    /* padding: 2.5rem; */
+    width: 100%;
+}
+
+.about-wrapper {
+    width: 80%;
+    /* background-color:rebeccapurple; */
+}
+
+.my-img-wrapper {
+    /* background-color: red; */
+    padding: 2rem;
+    width: 40%;
+
+}
+
+.my-img-wrapper img {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: indigo !important;
+}
+
+
+.right-about-wrapper {
+    width: 60%;
+    padding: 2rem;
+}
+
+
+
+
+
+/* right section of about wrapper */
+
+.right-about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Languages Known section  */
+
+.languages-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* .languages-section img {
+
+} */
+
+
+
+
+/* project section styling starts from here */
+.project-container {
+    width: 100%;
+    height: auto;
+    /* background-color: rebeccapurple; */
+}
+
+.project-container .project-wrapper {
+    width: 85%;
+    margin: 1rem auto;
+    /* background-color: blanchedalmond; */
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.project-container .project-wrapper>div {
+    /* background-color: blueviolet; */
+    height: 100%;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.image-project {
+    height: 60%;
+    /* background-color: red; */
+    /* object-fit: cover; */
+}
+
+.image-project img {
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 1rem;
+}
+
+
+.btn-live {
+    /* background-color: #4F46E5; */
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+    border-radius: 3rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .man-image {
+        justify-content: flex-end;
+    }
+
+    .man-image img {
+        width: 55%;
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    .project-container .project-wrapper {
+        width: 100%;
+    }
+}
+
+/* mediaquery for project section  */
+@media only screen and (max-width: 950px) {
+    .project-container .project-wrapper {
+        width: 90%;
+        grid-template-columns: 1fr 1fr ;
+        /* grid-template-rows: 1fr 1fr; */
+    }
+}
+@media only screen and (max-width: 700px) {
+    .btn-live{
+        width: 100%;
+        margin-top: -10px;
+    }
+    .project-container .project-wrapper {
+        width: 90%;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 1fr 1fr; */
+    }
+    .project-container .project-wrapper >div{
+        height: 350px;
+    }
+}
+
+
+
+
+/* media query for about page */
+@media only screen and (max-width: 600px) {
+    .about-wrapper {
+        width: 100%;
+    }
+
+    .about-container {
+        padding: 1rem;
+    }
+
+    .right-about-wrapper {
+        width: 100%;
+    }
+
+    .languages-section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .right-about-wrapper {
+        padding: 0px auto;
+    }
+
+    .about-heading {
+        margin: 0;
+    }
+
+    .about-container {
+        padding: 1rem;
+    }
+
+    .my-img-wrapper {
+        padding: 0px;
+    }
+
+}
+
+/* @media only screen and (max-width: 477px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    .my-img-wrapper {
+        width: 100%;
+        padding: 1rem;
+    }
+} */
+
+
+#aboutsection {
+    /* background-color: skyblue; */
+}
+
+@media only screen and (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    .my-img-wrapper {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-about-wrapper {
+        width: 100%;
+    }
+}

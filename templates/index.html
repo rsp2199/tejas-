@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{%static 'output.css' %}" rel="stylesheet">
+    <!-- font family nunito added here -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aios library for animation effects -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+</head>
+
+<body class="font-nunito ">
+    <!-- This is parent contaienr with full vh height  -->
+    <div class="parent-container h-screen w-screen">
+        <!-- container inside main parent contaienr -->
+        <div class="h-1/2 lg:h-screen w-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden">
+            <!-- Navbar starts from here -->
+            <nav class="w-full fixed top-0 bg-white z-10">
+                <div class="container py-5 mx-auto flex justify-between items-center">
+                    <div class="image mx-10">
+                        <!-- <img src="" alt=""> -->
+                        <span class="font-bold text-indigo-900 lg:text-2xl md:text-xl sm:text-sm">Portfolio</span>
+                    </div>
+                    <ul class="hidden md:flex space-x-6 text-gray-600 font-bold text-sm uppercase">
+                        <li class="hover:text-gray-500">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="hover:text-gray-500">
+                            <a href="#aboutsection">skills</a>
+                        </li>
+                        <li class="hover:text-gray-500">
+                            <a href="#">Services</a>
+                        </li>
+                        <li class="hover:text-gray-500">
+                            <a href="#">Work</a>
+                        </li>
+                        <li class="hover:text-gray-500">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <span class="mr-20 hidden md:block "><i class="fa-solid fa-moon cursor-pointer text-2xl"></i></span>
+
+                    <span id="hamburger" class="md:hidden mr-6 text-3xl cursor-pointer z-50"><i
+                            class="fa-solid fa-bars "></i></span>
+
+                    <ul id="menu"
+                        class=" hidden absolute left-0 top-0 bg-indigo-900 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutsection">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Work</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <!-- intro content starts here  -->
+            <!-- image  -->
+            <div class="man-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/A_Humble_Cartoon_Businessman.svg/1582px-A_Humble_Cartoon_Businessman.svg.png "
+                    alt="" />
+            </div>
+
+
+            <!-- circle -->
+            <div
+                class="hidden lg:block absolute right-0 left-0 mx-auto -bottom-1/4 w-big h-big -z-10 bg-indigo-900 rounded-full ">
+            </div>
+            <!-- animated text -->
+            <div
+                class="absolute text-grey-600 top-1/3 left-5 text-xl sm:left-10 sm:text-4xl lg:left-20 font-bold lg:text-5xl">
+                <span class="text-gray-500">Full Stack</span>
+                <p id="text" class="text-red-500"> </p>
+            </div>
+            <!-- texts -->
+            <div
+                class="hidden lg:flex flex-col gap-5 text-justify rounded-md absolute top-0 bottom-0 m-auto right-10 bg-white h-fit p-6 w-1/3 shadow-xl">
+                <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Tejas</h1>
+                <p class="text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quo cum
+                    esse nam eum nisi soluta,
+                    atque vel beatae est.</p>
+                <a class="bg-indigo-600 text-white text-xl w-fit px-3 py-2 rounded-md font-semibold "
+                    href="#contact">Hire me</a>
+            </div>
+        </div>
+
+        <!-- about me page -->
+        <h3 class=" about-heading text-center font-bold text-3xl text-indigo-600"> About Me</h3>
+        <div class="about-container" id="aboutsection">
+
+            <div class="about-wrapper flex">
+                <!-- left image -->
+                <div class="my-img-wrapper">
+                    <img class="w-96" src="{%static 'images/Tejas_Image.png '%}" alt="">
+                </div>
+                <!-- right content -->
+                <div class="right-about-wrapper">
+                    <h1 class="text-3xl font-medium">Technology Know</h1>
+
+                    <p class="text-gray-400 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita eos cum
+                        consequatur et natus quasi commodi. Itaque nisi quos sint dolore nobis soluta non eius, tempore,
+                        architecto error eveniet at.</p>
+                    <div class="languages-section">
+                        <img data-aos="flip-left" data-aos-duration="1200" width="70"
+                            src="{%static 'images/html-transformed.png '%}" alt="">
+                        <img data-aos="flip-left" data-aos-duration="1200" width="70" src="{%static 'images/css.webp '%}" alt="">
+                        <img data-aos="flip-left" data-aos-duration="1200" width="70" src="{%static 'images/JS3.svg '%}" alt="">
+                        <img data-aos="flip-right" data-aos-duration="1200" width="70" class="rounded-full"
+                            src="{%static 'images/react.jpg '%} " alt="">
+                        <img data-aos="flip-right" data-aos-duration="1200" width="70" src="{%static 'images/bootstrap.png '%}"
+                            alt="">
+                        <img data-aos="flip-right" data-aos-duration="1200" width="70" src="{%static 'images/tailwind.Default"
+                            alt="">
+                        <img data-aos="flip-left" data-aos-duration="1200" width="70" src="{%static 'images/git.png '%}" alt="">
+                        <img data-aos="flip-left" data-aos-duration="1200" class="rounded-full" width="70"
+                            src="{%static 'images/node.jpg '%} " alt="">
+                        <img data-aos="flip-left" data-aos-duration="1200" class="rounded-full" width="70"
+                            src="{%static 'images/express.png '%}" alt="">
+                        <img data-aos="flip-right" data-aos-duration="1200" class="rounded-full" width="70"
+                            src="{%static 'images/mongodb.png '%}" alt="">
+                        <img data-aos="flip-right" data-aos-duration="1200" class="rounded-full" width="70"
+                            src="{%static 'images/DSA.png '%}" alt="">
+                        <!-- <img width="70" src="{%static 'images/html-transformed.png '%}" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Projects -->
+
+
+        <h1 class="text-center text-2xl p-3 font-bold text-indigo-600">Project Samples</h1>
+        <div class="project-container">
+            <div class="project-wrapper">
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="{%static 'images/airbnb.jpg '%}" alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3  text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="{%static 'images/flower-website.jpg '%}" alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3  text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="{%static 'images/quiz-app.jpg '%} " alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3  text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="{%static 'images/weather-app.jpg '%} " alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3  text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="https://pngimg.com/d/under_construction_PNG42.png " alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3  text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+                <div class="project-card">
+                    <div class="image-project">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHAOs93fBgESugOtE0ZZvLkRb6WlOWVK6B_A&usqp=CAU"
+                            alt="">
+                    </div>
+                    <h3 class="text-xl">Heading</h3>
+                    <div class="info-project text-sm p-3 text-center">Lorem ipsum dolor sit amet consectetur
+                    </div>
+                    <button class="btn-live">Watch live</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- This is contact Us section -->
+        <section class='contact-us-container p-5' id='contact'>
+            <h1 class='p-5 text-center text-3xl font-bold text-indigo-600'>Contact </h1>
+            <h4 class=" text-center text-2xl font-bold text-black pb-5">Have Question ?</h4>
+            <p class="text-center text-sm font-bold text-gray-500 pb-5">Do You have any idea? Let's discuss and sew what we can do together</p>
+            <div class="contact-us-wrapper">
+                <div class="left-map-section">
+                    <Map />
+                </div>
+                <div class="right-input-section">
+                    <form action="contact" method="post" class="w-full max-w-lg mx-auto">
+                        {% csrf_token %}
+                        <div class="flex flex-wrap -mx-3 mb-1">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="name">
+                                    Name
+                                </label>
+                                <input
+                                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="name" type="text" placeholder="John Doe"  name="name" required/>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-1">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="email">
+                                    Email
+                                </label>
+                                <input
+                                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="email" type="email" placeholder="johndoe@example.com"  name="email" required/>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-1">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="name">
+                                    Mobile Number
+                                </label>
+                                <input
+                                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="name" type="number" placeholder="mobile number"  name="number" />
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-1">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="message">
+                                    Message
+                                </label>
+                                <textarea
+                                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="message" rows="2" placeholder="Enter your message" name="msg" required></textarea>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-indigo-600 text-white p-2 px-4 rounded-full text-sm hover:bg-indigo-400 hover:font-bold"
+                                type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- contactus section ends here -->
+
+        <!-- This is Footer secton of my portfolio -->
+        <footer class="bg-gray-800 text-gray-200 mt-10">
+            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-4">About Us</h3>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod,
+                            massa vel tincidunt commodo, quam augue commodo lacus, ut tristique sapien velit sit amet
+                            lorem.</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+                        <ul class="text-sm">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-4">Follow Us</h3>
+                        <div class="flex items-center">
+                            <a href="#" class="text-gray-400 hover:text-white mr-4"><i
+                                    class="fab fa-facebook fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white mr-4"><i
+                                    class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white mr-4"><i
+                                    class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium mb-4">Contact Us</h3>
+                        <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i>123 Main Street, Anytown
+                            USA</p>
+                        <p class="text-sm"><i class="fas fa-envelope mr-2"></i>info@example.com</p>
+                        <p class="text-sm"><i class="fas fa-phone mr-2"></i>555-123-4567</p>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-700 pt-8">
+                    <p class="text-sm text-gray-500">© 2023 Example Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+    <script src="{%static 'app.js '%}"></script>
+    <script src="{%static 'autotyping.js'%}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
